@@ -1,4 +1,4 @@
-Voici un fichier `README.md` complet pour votre TP :
+
 
 #  API REST Sécurisée avec JWT - Spring Boot
 
@@ -192,5 +192,6 @@ Content-Type: application/json
 *TP Spring Security JWT*
 
 ---
+
 
 
