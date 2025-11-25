@@ -107,13 +107,14 @@ mvn spring-boot:run
 
 2. Authentification Utilisateur
 
-```POST http://localhost:8080/api/auth/login
+``` POST http://localhost:8080/api/auth/login
 Content-Type: application/json
 
 {
   "username": "user",
   "password": "password"
-}  ```
+}
+ ```
 
 <img width="959" height="512" alt="2" src="https://github.com/user-attachments/assets/925a5e4a-763a-4e36-8d85-7285cc979803" />
 
@@ -123,7 +124,8 @@ Content-Type: application/json
 3. Accès Endpoint Sécurisé
 
 ```GET http://localhost:8080/api/user/profile
-  Authorization: Bearer <votre-token-jwt> ```
+  Authorization: Bearer <votre-token-jwt>
+ ```
 
 <img width="959" height="539" alt="3" src="https://github.com/user-attachments/assets/590e3752-ef48-4b3d-aaa4-13fc7233efda" />
 
@@ -190,4 +192,5 @@ Content-Type: application/json
 *TP Spring Security JWT*
 
 ---
+
 
