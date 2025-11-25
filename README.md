@@ -102,44 +102,56 @@ mvn spring-boot:run
 1. Test Endpoint Public
 
   ``` GET http://localhost:8080/api/public/hello ```
+  
 <img width="959" height="497" alt="1" src="https://github.com/user-attachments/assets/1ec2997d-282a-4a58-a0d4-259e1909c9eb" />
 
 2. Authentification Utilisateur
 
-``` POST http://localhost:8080/api/auth/login ```
+```POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "user",
+  "password": "password"
+}  ```
 
 <img width="959" height="512" alt="2" src="https://github.com/user-attachments/assets/925a5e4a-763a-4e36-8d85-7285cc979803" />
 
 
-<img width="959" height="539" alt="3" src="https://github.com/user-attachments/assets/590e3752-ef48-4b3d-aaa4-13fc7233efda" />
-
-
 <img width="956" height="538" alt="4" src="https://github.com/user-attachments/assets/07b452b9-d09e-44e5-bf45-c25a26280269" />
 
+3. Accès Endpoint Sécurisé
+
+```GET http://localhost:8080/api/user/profile
+  Authorization: Bearer <votre-token-jwt> ```
+
+<img width="959" height="539" alt="3" src="https://github.com/user-attachments/assets/590e3752-ef48-4b3d-aaa4-13fc7233efda" />
+
+  ``` /api/admin/dashboard ```
 
 <img width="942" height="488" alt="5" src="https://github.com/user-attachments/assets/c4ae08af-adcf-4f2a-b993-1030ffe88b49" />
 
-## 🔧 Fonctionnalités Implémentées
+##  Fonctionnalités Implémentées
 
-### 🛡️ Sécurité
+###  Sécurité
 - **Authentification Stateless** avec JWT
 - **Autorisation basée sur les rôles** (USER/ADMIN)
 - **Filtre JWT personnalisé** pour validation des tokens
 - **Protection CSRF** désactivée pour API REST
 - **Gestion des sessions** stateless
 
-### 📊 Persistance
+###  Persistance
 - **Entités JPA** avec relations ManyToMany
 - **Chiffrement des mots de passe** avec BCrypt
 - **Initialisation automatique** des données de test
 
-### 🔑 JWT
+###  JWT
 - **Génération de tokens** avec expiration
 - **Validation et extraction** des claims
 - **Signature HMAC-SHA256**
 - **Tokens auto-porteurs** sans stockage serveur
 
-## 🎯 Concepts Pédagogiques Maîtrisés
+##  Concepts Pédagogiques Maîtrisés
 
 ### Spring Security
 - Configuration de `SecurityFilterChain`
@@ -159,7 +171,7 @@ mvn spring-boot:run
 - Sérialisation JSON automatique
 - Stateless vs Stateful
 
-## 🔍 Dépannage
+##  Dépannage
 
 ### Erreurs Courantes
 - **`403 Forbidden`** : Token manquant ou insuffisant
@@ -171,20 +183,11 @@ mvn spring-boot:run
 - Port 8080 disponible
 - Données d'initialisation créées
 
-## 📚 Prochaines Étapes
-- Refresh tokens
-- Validation des données avec Bean Validation
-- Documentation API avec Swagger
-- Tests unitaires et d'intégration
-- Déploiement Docker
 
-## 👨‍💻 Auteur
+
+##  Auteur
 **AICHA BARAHOU**  
 *TP Spring Security JWT*
 
 ---
-
-**🎉 Félicitations ! Votre API REST sécurisée avec JWT est maintenant opérationnelle !**
-
-Ce fichier README.md peut être placé à la racine de votre projet. Il documente complètement votre travail et servira de référence pour votre TP.
 
